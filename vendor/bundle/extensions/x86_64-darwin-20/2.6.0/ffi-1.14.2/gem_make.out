@@ -1,5 +1,5 @@
-current directory: /Users/tokuhironoboru/Desktop/syukuhaku4/syukuhaku/vendor/bundle/gems/ffi-1.14.2/ext/ffi_c
-/Users/tokuhironoboru/.rbenv/versions/2.6.6/bin/ruby -I /Users/tokuhironoboru/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210122-16764-1k9iqrx.rb extconf.rb
+current directory: /Users/tokuhironoboru/Desktop/syukuhaku2/syukuhaku/vendor/bundle/gems/ffi-1.14.2/ext/ffi_c
+/Users/tokuhironoboru/.rbenv/versions/2.6.6/bin/ruby -I /Users/tokuhironoboru/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210116-10803-1m1mxwh.rb extconf.rb
 checking for ffi_prep_closure_loc() in -lffi... yes
 checking for ffi_prep_cif_var()... yes
 checking for ffi_raw_call()... yes
@@ -7,10 +7,10 @@ checking for ffi_prep_raw_closure()... yes
 creating extconf.h
 creating Makefile
 
-current directory: /Users/tokuhironoboru/Desktop/syukuhaku4/syukuhaku/vendor/bundle/gems/ffi-1.14.2/ext/ffi_c
+current directory: /Users/tokuhironoboru/Desktop/syukuhaku2/syukuhaku/vendor/bundle/gems/ffi-1.14.2/ext/ffi_c
 make "DESTDIR=" clean
 
-current directory: /Users/tokuhironoboru/Desktop/syukuhaku4/syukuhaku/vendor/bundle/gems/ffi-1.14.2/ext/ffi_c
+current directory: /Users/tokuhironoboru/Desktop/syukuhaku2/syukuhaku/vendor/bundle/gems/ffi-1.14.2/ext/ffi_c
 make "DESTDIR="
 compiling AbstractMemory.c
 compiling ArrayType.c
@@ -37,6 +37,6 @@ compiling Variadic.c
 compiling ffi.c
 linking shared-object ffi_c.bundle
 
-current directory: /Users/tokuhironoboru/Desktop/syukuhaku4/syukuhaku/vendor/bundle/gems/ffi-1.14.2/ext/ffi_c
+current directory: /Users/tokuhironoboru/Desktop/syukuhaku2/syukuhaku/vendor/bundle/gems/ffi-1.14.2/ext/ffi_c
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20210122-16764-ujs1a
+/usr/bin/install -c -m 0755 ffi_c.bundle ./.gem.20210116-10803-11u3mdr

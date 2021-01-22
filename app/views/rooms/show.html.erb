@@ -1,0 +1,44 @@
+<div class="room-show-box">
+    <div class="room-detail padding15">
+        <div><img src="<%= @room.room_image %>" alt="" class="room-show-image"></div>
+        <div></div>
+    </div>
+    <div class="padding15">
+        <p>予約なり〜</p>
+        <%= link_to "ルーム予約へ", "/reservations/#{@room.id}/new" %>
+
+        <%= form_with url: "reservations/#{@room.id}/new", method: :get, local: true do |f| %>
+            <div>
+                <%= f.label :チェックイン %>
+                <%= f.date_field :start %>
+            </div>
+
+            <div>
+                <%= f.label :チェックアウト %>
+                <%= f.date_field :finish %>
+            </div>
+
+            <div>
+                <%= f.label :人数 %>
+                <%= f.number_field :person %>
+            </div>
+
+            <div>
+                <%= f.hidden_field :user_id, value: current_user.id %>
+            </div>
+
+            <div>
+                <%= f.hidden_field :room_id, value: @room.id %>
+            </div>
+
+            <div>
+                <%= f.label :１日あたり１人の料金 %>
+                <%= f.hidden_field :cost, value: @room.cost %>
+                <%= @room.cost %>
+            </div>
+
+            <%= f.submit :予約する %>
+        <% end %>
+        
+    </div>
+</div>

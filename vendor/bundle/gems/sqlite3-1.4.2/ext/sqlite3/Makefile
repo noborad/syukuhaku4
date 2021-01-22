@@ -31,8 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20210122-16764-ka8mda
-sitelibdir = $(DESTDIR)./.gem.20210122-16764-ka8mda
+sitearchdir = $(DESTDIR)./.gem.20210116-10803-cf7icd
+sitelibdir = $(DESTDIR)./.gem.20210116-10803-cf7icd
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -85,11 +85,11 @@ warnflags = -Wall -Wextra -Wdeclaration-after-statement -Wdeprecated-declaration
 cppflags = 
 CCDLFLAGS = -fno-common
 CFLAGS   = $(CCDLFLAGS) $(cflags)  -fno-common -pipe  -DTAINTING_SUPPORT $(ARCH_FLAG)
-INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) -I/usr/local/Cellar/sqlite/3.34.0/include
+INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) 
 DEFS     = 
-CPPFLAGS = -DHAVE_RB_PROC_ARITY -DHAVE_RB_INTEGER_PACK -DHAVE_SQLITE3_INITIALIZE -DHAVE_SQLITE3_BACKUP_INIT -DHAVE_SQLITE3_COLUMN_DATABASE_NAME -DHAVE_SQLITE3_ENABLE_LOAD_EXTENSION -DHAVE_SQLITE3_LOAD_EXTENSION -DHAVE_SQLITE3_OPEN_V2 -DHAVE_SQLITE3_PREPARE_V2 -DHAVE_TYPE_SQLITE3_INT64 -DHAVE_TYPE_SQLITE3_UINT64 -I/usr/local/opt/sqlite/include -I/Users/tokuhironoboru/.rbenv/versions/2.6.6/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
+CPPFLAGS = -DHAVE_RB_PROC_ARITY -DHAVE_RB_INTEGER_PACK -DHAVE_SQLITE3_INITIALIZE -DHAVE_SQLITE3_BACKUP_INIT -DHAVE_SQLITE3_COLUMN_DATABASE_NAME -DHAVE_SQLITE3_OPEN_V2 -DHAVE_SQLITE3_PREPARE_V2 -DHAVE_TYPE_SQLITE3_INT64 -DHAVE_TYPE_SQLITE3_UINT64 -I/usr/local/Cellar/sqlite/3.34.0/include -I/Users/tokuhironoboru/.rbenv/versions/2.6.6/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags)  $(ARCH_FLAG)
-ldflags  = -L. -L/Users/tokuhironoboru/.rbenv/versions/2.6.6/lib  -fstack-protector-strong -L/usr/local/lib -L/usr/local/Cellar/sqlite/3.34.0/lib
+ldflags  = -L. -L/Users/tokuhironoboru/.rbenv/versions/2.6.6/lib  -fstack-protector-strong -L/usr/local/lib 
 dldflags = -L/Users/tokuhironoboru/.rbenv/versions/2.6.6/lib  -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
@@ -125,8 +125,8 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
-libpath = . $(libdir) /usr/local/opt/sqlite/lib
-LIBPATH =  -L. -L$(libdir) -L/usr/local/opt/sqlite/lib
+libpath = . $(libdir) /usr/local/Cellar/sqlite/3.34.0/lib
+LIBPATH =  -L. -L$(libdir) -L/usr/local/Cellar/sqlite/3.34.0/lib
 DEFFILE = 
 
 CLEANFILES = mkmf.log

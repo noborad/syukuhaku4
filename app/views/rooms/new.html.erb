@@ -1,0 +1,38 @@
+<h1>ルーム登録</h1>
+
+<%= form_with model: @room, local: true, multipart: true do |f| %>
+    
+    <div>
+        <%= f.label :ルーム名 %>
+        <%= f.text_field :name %>
+    </div>
+
+    <div>
+        <%= f.label :ルーム紹介 %>
+        <%= f.text_area :introduction %>
+    </div>
+
+    <div>
+        <%= f.label :料金 %>
+        <%= f.text_field :cost %>
+    </div>
+
+    <div>
+        <%= f.label :住所 %>
+        <%= f.text_field :address %>
+    </div>
+
+    <div>
+        <%= f.label :ルーム画像 %>
+        <%= f.file_field :room_image %>
+    </div>
+
+    <div>
+        <%= f.hidden_field :user_id, value: current_user.id%>
+    </div>
+
+    <div>
+        <%= f.submit %>
+    </div>
+
+<% end %>
