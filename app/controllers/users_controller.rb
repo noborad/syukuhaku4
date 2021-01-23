@@ -24,6 +24,11 @@ class UsersController < ApplicationController
 
   def profile_update
     current_user.assign_attributes(configure_account_update_params)
+    if params[:user_image]
+      current_user.user_image = "#{current_user.id}.jpg"
+      image = params[:user_image]
+      File.binwrite("public/user_images/#{current_user.user_image}",image.read)
+    end
     if current_user.save
 	  redirect_to "/profile_edit", notice: 'プロフィールを更新しました'
     else

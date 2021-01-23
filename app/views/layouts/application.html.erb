@@ -11,32 +11,43 @@
 
   <body>
     <header>
-      <nav class="navbar navbar-default">
+      <nav class="navbar navbar-expand-lg bg-light">
           <% if user_signed_in? %>
-            <%= link_to "HOME", "/" %>
-            <%= form_tag("/rooms",:method => 'get') do %>
-              <%= text_field_tag :search %>
-              <%= submit_tag '探す', :name => nil %>
-            <% end %>
-            <%= form_tag("/rooms/keyword",:method => 'get') do %>
-              <%= text_field_tag :search %>
-              <%= submit_tag '探す', :name => nil %>
-            <% end %>
-            <%= link_to "登録済みルーム", "/users/#{current_user.id}/post_room" %>
-            <%= link_to "予約済みルーム", "/users/#{current_user.id}/reserved_room" %>
-            <%= link_to "ユーザー設定", "/users/account" %>
-            <%= link_to "ルーム登録", "/rooms/new"       %>
-            <%= link_to "ログアウト", "/users/sign_out"  %>
-            <%= current_user.user_name                 %>
+            <div class="navbar-nav mr-auto">
+              <%= render "shared/search" %>
+            </div>
+
+              <div class="dropdown visible-xs text-right">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="<%= current_user.user_image %>" alt="" class="avator rounded-circle"></a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li><%= link_to "登録済みルーム", "/users/#{current_user.id}/post_room" %></li>
+                  <li><%= link_to "予約済みルーム", "/users/#{current_user.id}/reserved_room" %></li>
+                  <li><%= link_to "ユーザー設定", "/users/account" %></li>
+                  <li><%= link_to "ルーム登録", "/rooms/new"       %></li>
+                  <li><%= link_to "ログアウト", "/users/sign_out"  %></li>
+                </ul>
+              </div>
+              <div class="text-right"><%= current_user.user_name                %></div>
+
           <% else %>
-            <%= link_to "HOME", "/" %>
-            <%= link_to "ログイン", "/users/sign_in" %>
-            <%= link_to "新規登録", "/users/sign_up" %>
+
+            <div class="navbar-nav mr-auto">
+              <%= render "shared/search" %>
+            </div>
+            <div class="navbar-nav">
+              <%= link_to "ログイン", "/users/sign_in", class: "btn btn-primary" %>
+              <%= link_to "新規登録", "/users/sign_up", class: "btn btn-primary" %>
+            </div>
+
           <% end %>
+
       </nav>
     </header>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert   %></p>
     <%= yield %>
+    <footer>
+      <div class="footer-logo text-center">syukuhaku</div>
+    </footer>
   </body>
 </html>

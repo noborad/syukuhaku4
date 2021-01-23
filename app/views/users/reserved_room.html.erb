@@ -1,39 +1,39 @@
 <h1>予約済みルーム一覧</h1>
 
-<table>
+<table class="table">
     <thead>
         <th>
-            <tr>ルーム画像</tr>
+            ルーム画像
         </th>
         <th>
-            <tr>ルーム名</tr>
+            ルーム名
         </th>
         <th>
-            <tr>ルーム紹介</tr>
+            ルーム紹介
         </th>
         <th>
-            <tr>合計料金</tr>
+            合計料金
         </th>
         <th>
-            <tr>開始日</tr>
+            開始日
         </th>
         <th>
-            <tr>終了日</tr>
+            終了日
         </th>
         <th>
-            <tr>予約確定日時</tr>
+            予約確定日時
         </th>
     </thead>
     <tbody>
         <% @users.reservations.each do |reservation| %>
             <tr>
-                <td><img src="<%= reservation.room.room_image %>" alt="" class="table-image"></td>
-                <td><%= reservation.room.name %></td>
-                <td><%= reservation.room.introduction %></td>
-                <td><%= reservation.cost %></td>
-                <td><%= reservation.start %></td>
-                <td><%= reservation.finish %></td>
-                <td><%= reservation.created_at %></td>
+                <td class="align-middle"><img src="<%= reservation.room.room_image %>" alt="" class="table-image"></td>
+                <td class="align-middle"><%= link_to reservation.room.name, "/rooms/#{reservation.room.id}" %></td>
+                <td class="align-middle"><%= reservation.room.introduction %></td>
+                <td class="align-middle"><%= reservation.cost %></td>
+                <td class="align-middle"><%= reservation.start %></td>
+                <td class="align-middle"><%= reservation.finish %></td>
+                <td class="align-middle"><%= reservation.created_at.strftime("%Y-%m-%d %H:%M") %></td>
             </tr>
         <% end %>
     </tbody>

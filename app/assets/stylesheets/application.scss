@@ -1,8 +1,20 @@
 @import "bootstrap";
 
 
+// header
+.home {
+    margin-right: 10px;
+}
 
+// footer
+footer {
+    background-color: black;
+    height: 200px;
+}
 
+.footer-logo {
+    color: white;
+}
 
 
 
@@ -15,6 +27,15 @@
 .table-image {
     width: 240px;
     height: 240px;
+}
+
+.avator {
+    width: 70px;
+    height: 70px;
+}
+
+.account-content {
+    margin-bottom: 30px;
 }
 
 
@@ -79,6 +100,12 @@
 .padding15 {
     padding-right: 15px;
     padding-left: 15px;
+    
+}
+
+.form-box {
+    border: gray solid 2px
+    
 }
 
 .room-detail {
@@ -88,4 +115,24 @@
 .room-show-image {
     width: 100%;
     height: 356.78px;
+}
+
+// room/new
+.regist-room {
+    width: 50%;
+}
+
+
+
+// room/show
+.room-name-address {
+    display: flex;
+    margin: 10px 100px;
+}
+
+.room-introduction {
+    border-top: gray solid 1px;
+    border-bottom: gray solid 1px;
+    padding: 20px 0px;
+    margin: 10px 100px;
 }
