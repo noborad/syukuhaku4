@@ -1,5 +1,5 @@
-current directory: /Users/tokuhironoboru/Desktop/syukuhaku4/syukuhaku/vendor/bundle/gems/nio4r-2.5.4/ext/nio4r
-/Users/tokuhironoboru/.rbenv/versions/2.6.6/bin/ruby -I /Users/tokuhironoboru/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210122-16764-182gs5u.rb extconf.rb
+current directory: /Users/tokuhironoboru/Desktop/syukuhaku2/syukuhaku/vendor/bundle/gems/nio4r-2.5.4/ext/nio4r
+/Users/tokuhironoboru/.rbenv/versions/2.6.6/bin/ruby -I /Users/tokuhironoboru/.rbenv/versions/2.6.6/lib/ruby/2.6.0 -r ./siteconf20210116-10803-1y31tpl.rb extconf.rb
 checking for unistd.h... yes
 checking for linux/aio_abi.h... no
 checking for sys/select.h... yes
@@ -11,10 +11,10 @@ checking for port_event_t in port.h... no
 checking for sys/resource.h... yes
 creating Makefile
 
-current directory: /Users/tokuhironoboru/Desktop/syukuhaku4/syukuhaku/vendor/bundle/gems/nio4r-2.5.4/ext/nio4r
+current directory: /Users/tokuhironoboru/Desktop/syukuhaku2/syukuhaku/vendor/bundle/gems/nio4r-2.5.4/ext/nio4r
 make "DESTDIR=" clean
 
-current directory: /Users/tokuhironoboru/Desktop/syukuhaku4/syukuhaku/vendor/bundle/gems/nio4r-2.5.4/ext/nio4r
+current directory: /Users/tokuhironoboru/Desktop/syukuhaku2/syukuhaku/vendor/bundle/gems/nio4r-2.5.4/ext/nio4r
 make "DESTDIR="
 compiling bytebuffer.c
 compiling monitor.c
@@ -90,6 +90,6 @@ In file included from nio4r_ext.c:6:
 compiling selector.c
 linking shared-object nio4r_ext.bundle
 
-current directory: /Users/tokuhironoboru/Desktop/syukuhaku4/syukuhaku/vendor/bundle/gems/nio4r-2.5.4/ext/nio4r
+current directory: /Users/tokuhironoboru/Desktop/syukuhaku2/syukuhaku/vendor/bundle/gems/nio4r-2.5.4/ext/nio4r
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20210122-16764-kj5i19
+/usr/bin/install -c -m 0755 nio4r_ext.bundle ./.gem.20210116-10803-1d9zi4m
